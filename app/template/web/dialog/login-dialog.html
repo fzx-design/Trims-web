@@ -1,0 +1,32 @@
+<div class="trims-login-dialog-container">
+  <div class="login-dialog-title">
+    <i class="trims-icon-lock"></i>&nbsp;&nbsp;登录 Trims
+  </div>
+  <div trims-input-box
+       class="trims-input-box trims-web-input-box login-email"
+       type="email"
+       value="email"
+       required="true"
+       disabled="false"
+       placeholder="邮箱地址">
+  </div>
+  <div trims-input-box
+       class="trims-input-box trims-web-input-box login-password"
+       type="password"
+       value="password"
+       required="true"
+       disabled="false"
+       placeholder="密码">
+  </div>
+  <div class="checkbox-container">
+    <div class="pull-left">
+      <input type="checkbox" class="trims-checkbox" ng-model="remember"><span>&nbsp;记住密码</span>
+    </div>
+    <div class="pull-right">
+      <a href="javascript:;" class="trims-link trims-web-link">找回密码</a>
+    </div>
+  </div>
+  <div class="button-container">
+    <button class="trims-btn trims-web-btn trims-web-btn-default" ng-click="onClickLoginBtn();">登录<i class="icon-arrow-right"></i></button>
+  </div>
+</div>

@@ -1,0 +1,79 @@
+<!-- Header -->
+<trims-user-header></trims-user-header>
+
+<div class="center-container">
+	<div class="center-panel trims-panel">
+		<div class="center-item info">
+			<img class="avatar-big" ng-src="images/avatars/1.png"/>
+			<div class="info-wrapper">
+				<div class="name">{{currUser.name}}</div>
+				<div class="email">{{currUser.email}}</div>
+			</div>
+			<div class="link-wrapper">
+				<a href="javascript:;" class="trims-link trims-web-link">修改个人资料</a>
+			</div>
+		</div>
+		<div class="divider"></div>
+		<div class="center-item plan">
+			<div class="title">计划</div>
+			<div class="content clearfix">
+				<div class="pull-left">
+					<div><span class="bold">5</span><span class="lighter">GB</span></div>
+					<div class="time"><span class="bold">2015 年 12 月 10 日</span>到期</div>
+				</div>
+				<div class="pull-right">
+					<button class="trims-btn trims-web-btn trims-web-btn-primary">续费和升级</button>
+				</div>
+				<div class="clearfix"></div>
+				<div style="margin-top: 40px;">
+					<div class="size-bar" trims-progress-bar style="width: 100%;" percent="40" mode="dynamic"></div>
+					<div class="grey" style="margin-top: 5px;"><span class="bold">1</span>/3 个项目</div>
+				</div>
+			</div>
+		</div>
+		<div class="divider"></div>
+		<div class="center-item invite clearfix">
+			<div class="pull-left">
+				<div class="black">免费获得使用时间</div>
+				<div class="grey">每成功邀请一位用户即可免费获得一个月使用时间*</div>
+			</div>
+			<div class="pull-right">
+				<button class="trims-btn trims-web-btn trims-web-btn-primary">邀请朋友</button>
+			</div>
+		</div>
+		<div class="divider"></div>
+		<div class="center-item password">
+			<div class="title">密码</div>
+			<div class="content clearfix">
+				<div class="pull-left">
+					<div class="black">已使用的设备</div>
+					<div class="grey">包括所有您登录 Trims 帐号并记住密码的设备。</div>
+					<div class="red" style="margin-top: 5px;">从所有设备注销</div>
+					<div class="red" style="margin-top: 5px;">修改密码</div>
+				</div>
+				<div class="pull-right">
+					<a href="javascript:;" class="trims-link trims-web-link">查看</a>
+				</div>
+			</div>
+		</div>
+		<div class="divider"></div>
+		<div class="center-item security">
+			<div class="title">安全</div>
+			<div class="content clearfix">
+				<div class="pull-left">
+					<div class="security">
+						<div class="black">Security Enclave</div>
+						<div class="grey">帮助您保护项目数据的安全并控制数据在云端的存储。</div>
+					</div>
+					<div class="red" style="margin-top: 5px;">备份和删除项目</div>
+				</div>
+				<div class="pull-right">
+					<a href="javascript:;" class="trims-link trims-web-link">了解</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Footer -->
+<trims-footer></trims-footer>

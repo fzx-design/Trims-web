@@ -1,0 +1,331 @@
+.main-section-wrapper {
+	width: 100%;
+
+	&.svn {
+		height: 675px;
+		background-color: @grey-bg;
+		position: relative;
+		overflow: hidden;
+		.main-section-image {
+			position: absolute;
+			-webkit-box-shadow: 0 30px 40px rgba(0,0,0,.3);
+			-moz-box-shadow: 0 30px 40px rgba(0,0,0,.3);
+			box-shadow: 0 30px 40px rgba(0,0,0,.3);
+			border: solid 1px #cacaca;
+			border-radius: 8px; 
+			width: 881px;
+			height: 620px;
+			.bg-image('../images/web/main/svn.png');
+			.bg-size(881px, 620px);
+			.bg-repeat();
+			.bg-position();
+			top: 100px;
+			right: 50%;
+			margin-right: -135px; 
+		}
+		.main-section-content {
+			position: relative;
+			.title-wrapper {
+				position: absolute;
+				top: 95px;
+				right: 0;
+				font-size: 32px;
+				line-height: 40px;
+				text-align: right;
+			}
+			.image-wrapper {
+				position: absolute;
+				top: 195px;
+				right: 0;
+				width: 150px;
+				height: 111px;
+				.bg-image('../images/web/main/icon-svn.png');
+				.bg-size(150px, 111px);
+				.bg-repeat();
+				.bg-position();
+			}
+			.line-wrapper {
+				position: absolute;
+				top: 467px;
+				left: 50%;
+				margin-left: 90px;
+				width: 300px;
+				height: 1px;
+				background-color: #aaa;
+			}
+			.intro-wrapper {
+				position: absolute;
+				font-size: 14px;
+				left: 50%;
+				top: 485px;
+				margin-left: 210px;
+			}
+		}
+	}
+
+	&.team {
+		height: 675px;
+		position: relative;
+		overflow: hidden;
+		.main-section-image {
+			position: absolute;
+			-webkit-box-shadow: 0 30px 40px rgba(0,0,0,.3);
+			-moz-box-shadow: 0 30px 40px rgba(0,0,0,.3);
+			box-shadow: 0 30px 40px rgba(0,0,0,.3);
+			border: solid 1px #cacaca;
+			border-radius: 8px; 
+			width: 732px;
+			height: 600px;
+			.bg-image('../images/web/main/team.png');
+			.bg-size(732px, 600px);
+			.bg-repeat();
+			.bg-position();
+			top: 344px;
+			left: 50%;
+			margin-left: -50px; 
+		}
+		.title-wrapper {
+			position: absolute;
+			top: 90px;
+			left: 0;
+			font-size: 32px;
+			line-height: 40px;
+			text-align: left;
+		}
+		.image-wrapper {
+			position: absolute;
+			top: 195px;
+			left: 0;
+			width: 150px;
+			height: 62px;
+			.bg-image('../images/web/main/icon-team.png');
+			.bg-size(150px, 62px);
+			.bg-repeat();
+			.bg-position();
+		}
+		.line-wrapper {
+			position: absolute;
+			top: 467px;
+			right: 50%;
+			margin-right: -80px;
+			width: 400px;
+			height: 1px;
+			background-color: #aaa;
+		}
+		.intro-wrapper {
+			position: absolute;
+			font-size: 14px;
+			right: 50%;
+			top: 485px;
+			margin-right: 130px;
+		}
+	}
+
+	&.resource {
+		height: 775px;
+		position: relative;
+		overflow: hidden;
+		background-color: @grey-bg;
+		.main-section-image {
+			position: absolute;
+			-webkit-box-shadow: 0 30px 40px rgba(0,0,0,.3);
+			-moz-box-shadow: 0 30px 40px rgba(0,0,0,.3);
+			box-shadow: 0 30px 40px rgba(0,0,0,.3);
+			border: solid 1px #cacaca;
+			border-radius: 8px; 
+			width: 1024px;
+			height: 577px;
+			.bg-image('../images/web/main/resource.png');
+			.bg-size(1024px, 577px);
+			.bg-repeat();
+			.bg-position();
+			top: 391px;
+			left: 50%;
+			margin-left: -512px; 
+		}
+		.title-wrapper {
+			position: absolute;
+			top: 95px;
+			left: 0;
+			font-size: 32px;
+			line-height: 40px;
+			text-align: left;
+
+			.trims-link {
+				font-size: 14px;
+			}
+		}
+		.line-wrapper {
+			position: absolute;
+			width: 1px;
+			height: 180px;
+			background-color: #aaa;
+			top: 295px;
+			&.first {
+				left: 16px;
+			}
+			&.second {
+				left: 406px;
+				height: 304px;
+			}
+			&.third {
+				left: 813px;
+				height: 283px;
+			}
+		}
+		.intro-wrapper {
+			position: absolute;
+			font-size: 14px;
+			top: 295px;
+			&.first {
+				left: 42px;
+			}
+			&.second {
+				left: 432px;
+			}
+			&.third {
+				left: 839px;
+			}
+		}
+	}
+
+	&.function {
+		height: 715px;
+		position: relative;
+		overflow: hidden;
+		padding: 56px 0;
+		.tile-wrapper {
+			width: 511px;
+			height: 300px;
+			border-right: 1px solid #e5e5e5;
+			float: left;
+			&.software {
+				border-bottom: 1px solid #e5e5e5;
+			}
+			&.os {
+				border-right: 1px solid #fff;
+				border-bottom: 1px solid #e5e5e5;
+			}
+			&.format {
+				border-right: 1px solid #fff;
+			}
+			.tile-icon {
+				width: 511px;
+				height: 85px;
+				.bg-repeat();
+				.bg-position();
+				&.software {
+					.bg-image('../images/web/main/icon-software.png');
+					.bg-size(105px, 46px);
+				}
+				&.os {
+					.bg-image('../images/web/main/icon-os.png');
+					.bg-size(97px, 38px);
+				}
+				&.speed {
+					margin-top: 40px;
+					.bg-image('../images/web/main/icon-speed.png');
+					.bg-size(102px, 48px);
+				}
+				&.format {
+					margin-top: 40px;
+					.bg-image('../images/web/main/icon-format.png');
+					.bg-size(107px, 44px);
+				}
+			}
+			.tile-title {
+				margin-top: 15px;
+				font-size: 24px;
+				text-align: center;
+				line-height: 75px;
+			}
+			.tile-content {
+				font-size: 14px;
+				color: @grey;
+				text-align: center;
+				width: 368px;
+				margin: 0 auto;
+			}
+		}
+	}
+	
+	&.know {
+		height: 333px;
+		position: relative;
+		overflow: hidden;
+		background-color: @grey-bg;
+		padding: 50px 0 0;
+		.title-wrapper {
+			color: #000;
+			font-size: 24px;
+			text-align: center;
+			.more {
+				color: #27b3fc;
+			}
+		}
+		.icon-wrapper {
+			width: 307px;
+			margin: 50px auto 0;
+			.icon {
+		        width: 84px;
+		        height: 84px;
+		        display: block;
+		        .bg-size(84px, 84px);
+		        .bg-repeat();
+		        .bg-position();
+		        float: left;
+		        &.svn {
+		          	.bg-image('../images/web/download/icon-svn.png');
+		        }
+		        &.people {
+		          	.bg-image('../images/web/download/icon-people.png');
+		        }
+		        &.box {
+		          	.bg-image('../images/web/download/icon-box.png');
+		        }
+		    }
+		}
+	}
+
+	.main-section-content {
+		width: 1024px;
+		margin: 0 auto;
+		position: relative;
+	}
+	&.banner {
+		background-color: #fff;
+		box-shadow: 0 1px 2px rgba(0,0,0,.1);
+		.main-section-content {
+			height: 330px;
+		}
+		.title-wrapper {
+			float: left;
+			font-size: 40px;
+			line-height: 64px;
+			font-weight: lighter;
+			margin-top: 120px;
+		}
+		.button-wrapper {
+			float: right;
+			margin-top: 115px;
+			.intro-text-12 {
+				line-height: 35px;
+			}
+		}
+	}
+
+	.blue-border-bottom {
+		border-bottom: 1px solid #a1f1ff;
+		padding-bottom: 12px;
+	}
+	.intro-text-12 {
+		color: @grey;
+		font-size: 12px;
+		line-height: 20px;
+	}
+	.intro-text-14 {
+		color: @grey;
+		font-size: 14px;
+		line-height: 20px;
+	}
+}

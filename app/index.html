@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/ngDialog/css/ngDialog.css" />
+    <link rel="stylesheet" href="bower_components/ngDialog/css/ngDialog-theme-default.css" />
+    <link rel="stylesheet" href="bower_components/normalize.css/normalize.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/index.css -->
+    <link rel="stylesheet" href="styles/index.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="trimsWebFrontApp">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div ui-view></div>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/jquery.easing/js/jquery.easing.js"></script>
+    <script src="bower_components/ngDialog/js/ngDialog.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/register.js"></script>
+    <script src="scripts/controllers/download.js"></script>
+    <script src="scripts/controllers/center.js"></script>
+
+    <script src="scripts/controllers/demo-mac.js"></script>
+    <script src="scripts/controllers/demo-web.js"></script>
+
+    <script src="scripts/directives/trims-history-preview.js"></script>
+    <script src="scripts/directives/trims-preview.js"></script>
+    <script src="scripts/directives/trims-select.js"></script>
+    <script src="scripts/directives/trims-search-box.js"></script>
+    <script src="scripts/directives/trims-input-box.js"></script>
+    <script src="scripts/directives/trims-progress-bar.js"></script>
+    <script src="scripts/directives/trims-toggle.js"></script>
+    <script src="scripts/directives/trims-radio.js"></script>
+    <script src="scripts/directives/trims-color-rep.js"></script>
+    <script src="scripts/directives/trims-inspector-history.js"></script>
+    <script src="scripts/directives/trims-inspector-log-preview.js"></script>
+    <script src="scripts/directives/trims-circle-mark.js"></script>
+    <script src="scripts/directives/trims-window-actions.js"></script>
+    <script src="scripts/directives/trims-scroll.js"></script>
+    <script src="scripts/directives/trims-inspector-feedback.js"></script>
+
+    <script src="scripts/directives/web/trims-header.js"></script>
+    <script src="scripts/directives/web/trims-user-header.js"></script>
+    <script src="scripts/directives/web/trims-footer.js"></script>
+
+    <script src="scripts/factorys/user-service.js"></script>
+    <script src="scripts/factorys/user-resource.js"></script>
+
+    <!-- endbuild -->
+</body>
+</html>

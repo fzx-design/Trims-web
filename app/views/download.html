@@ -1,0 +1,48 @@
+<!-- Header -->
+<trims-header class="white-header"></trims-header>
+
+<!-- Content -->
+<div class="banner-container">
+  <div class="banner-content">
+    <div class="image-container {{downloadInfo['img-bg-class']}}">
+    </div>
+    <div class="info-container">
+      <div class="info-title">{{downloadInfo['info-title']}}</div>
+      <button class="trims-btn trims-web-btn trims-web-btn-big">
+        <span class="trims-btn-title">立即下载</span>
+        <span class="trims-btn-title-sub">{{downloadInfo['btn-title-sub']}}</span>
+        <i class="icon-download"></i>
+      </button>
+      <div class="or">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;或&nbsp;</div>
+      <a href="javascript:;" class="trims-link trims-web-link link" ng-click="openDownloadDialog()">下载面向其他操作系统的版本</a>
+    </div>
+  </div>
+</div>
+
+<div class="todo-container">
+  <div class="todo-title">我能用 Trims 做什么？</div>
+  <div class="todo-content">
+    <div class="todo-tile">
+      <i class="icon svn"></i>
+      <div class="tile-title">协同设计和版本控制</div>
+      <div class="tile-intro">利用 Trims 可以方便的对方案文件进行协同编辑和版本同步，或是回溯至以前的版本。</div>
+      <a href="javascript:;" class="trims-link trims-web-link tile-link">了解更多</a>
+    </div>
+    <div class="todo-tile">
+      <i class="icon people"></i>
+      <div class="tile-title">多方文件交接和反馈</div>
+      <div class="tile-intro">设计师可利用 Trims 对方案文件进行协同编辑和版本同步，或是回溯至以前的版本。</div>
+      <a href="javascript:;" class="trims-link trims-web-link tile-link">了解更多</a>
+    </div>
+    <div class="todo-tile" style="float: right; width: 274px;">
+      <i class="icon box"></i>
+      <div class="tile-title">开发图片资源生成</div>
+      <div class="tile-intro">设计师可利用 Trims 对方案文件进行协同编辑和版本同步，或是回溯至以前的版本。</div>
+      <a href="javascript:;" class="trims-link trims-web-link tile-link">了解更多</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<trims-footer></trims-footer>

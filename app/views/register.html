@@ -1,0 +1,212 @@
+<!-- Header -->
+<trims-header class="grey-header"></trims-header>
+
+<!-- Content -->
+<div class="register-container">
+  <div class="register-content">
+    <div class="register-title">
+      开始使用 Trims
+      <div class="register-step">{{currTitle}}</div>
+    </div>
+    <div class="register-panel-wrapper register-step-1">
+      <div class="register-panel trims-panel">
+        <div trims-input-box
+             class="trims-input-box trims-web-input-box register-email"
+             type="email"
+             value="userModel.email"
+             required="true"
+             disabled="false"
+             placeholder="邮箱地址">
+        </div>
+        <div trims-input-box
+             class="trims-input-box trims-web-input-box register-password"
+             type="password"
+             value="userModel.password"
+             required="true"
+             disabled="false"
+             placeholder="密码">
+        </div>
+        <div trims-input-box
+             class="trims-input-box trims-web-input-box register-confirm-password"
+             type="password"
+             value="confirmPassword"
+             required="true"
+             disabled="false"
+             placeholder="确认密码">
+        </div>
+        <div class="register-button-wrapper">
+          <button class="trims-btn trims-web-btn trims-web-btn-default" ng-click="confirmRegister();">注册<i class="icon-arrow-right"></i></button>
+        </div>
+        <div class="register-link-wrapper">
+          <span>点按注册即视为同意</span><a href="javascript:;" class="trims-link trims-web-link">服务条款和政策</a>
+        </div>
+      </div>
+    </div>
+    <div class="register-panel-wrapper register-step-2">
+      <div class="plan-panel-wrapper">
+        <div class="plan-panel small" ng-class="{'active': userModel.planType == '5GB'}" ng-click="changePlanType('5GB')" ng-mouseenter="tempPlanType('5GB')" ng-mouseleave="recoverPlanType()">
+          <div class="plan-info-wrapper">
+            <div class="storage-size"><span class="size">5</span>GB</div>
+            <div class="team-type">适合小型项目和团队</div>
+            <div class="team-num"><span class="num">3</span>项目成员</div>
+            <div class="project-num"><span class="num">2</span>项目数</div>
+            <div class="clearfix"></div>
+            <ul class="support-info">
+              <li class="icon-security">支持 Security Enclave&nbsp;<a href="javascript:;" class="trims-link trims-web-link link">了解</a></li>
+              <li class="icon-update">免费软件更新</li>
+            </ul>
+          </div>
+          <div class="plan-price-wrapper">
+            <div class="price-info" style="font-size: 32px;">免费<span class="sub" style="font-size: 12px;">（首个月）</span></div>
+          </div>
+        </div>
+        <div class="plan-panel medium" ng-class="{'active': userModel.planType == '30GB'}" ng-click="changePlanType('30GB')" ng-mouseenter="tempPlanType('30GB')" ng-mouseleave="recoverPlanType()">
+          <div class="plan-info-wrapper">
+            <div class="storage-size"><span class="size">30</span>GB</div>
+            <div class="team-type">适合小微公司和中型项目</div>
+            <div class="team-num"><span class="num">8</span>项目成员</div>
+            <div class="project-num"><span class="num">5</span>项目数</div>
+            <div class="clearfix"></div>
+            <ul class="support-info">
+              <li class="icon-security">支持 Security Enclave&nbsp;<a href="javascript:;" class="trims-link trims-web-link link">了解</a></li>
+              <li class="icon-update">免费软件更新</li>
+            </ul>
+          </div>
+          <div class="plan-price-wrapper">
+            <div class="time-info">每月</div>
+            <div class="price-info"><span class="sub">¥&nbsp;</span>49<span class="sub">.9</span></div>
+          </div>
+        </div>
+        <div class="plan-panel large" ng-class="{'active': userModel.planType == '120GB'}" ng-click="changePlanType('120GB')" ng-mouseenter="tempPlanType('120GB')" ng-mouseleave="recoverPlanType()">
+          <div class="plan-info-wrapper">
+            <div class="storage-size"><span class="size">120</span>GB</div>
+            <div class="team-type">适合小型公司和中大型项目</div>
+            <div class="team-num"><span class="num">20</span>项目成员</div>
+            <div class="project-num"><span class="num">10</span>项目数</div>
+            <div class="clearfix"></div>
+            <ul class="support-info">
+              <li class="icon-security">支持 Security Enclave&nbsp;<a href="javascript:;" class="trims-link trims-web-link link">了解</a></li>
+              <li class="icon-update">免费软件更新</li>
+            </ul>
+          </div>
+          <div class="plan-price-wrapper">
+            <div class="time-info">每月</div>
+            <div class="price-info"><span class="sub">¥&nbsp;</span>129<span class="sub">.9</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="plan-tip">* 您可以随时变更计划。</div>
+      <div class="plan-button-wrapper">
+        <button class="trims-btn trims-web-btn trims-web-btn-big" ng-click="confirmPlan();">
+          <span class="trims-btn-title">确认计划</span>
+          <span class="trims-btn-title-sub" ng-show="userModel.planType == '5GB'">5GB</span>
+          <span class="trims-btn-title-sub" ng-show="userModel.planType == '30GB'">30GB</span>
+          <span class="trims-btn-title-sub" ng-show="userModel.planType == '120GB'">120GB</span>
+          <i class="icon-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+    <div class="register-panel-wrapper register-step-3">
+      <div class="pay-panel trims-panel">
+        <div class="pay-plan">
+          <div class="pay-label">计划</div>
+          <div class="pay-content">
+            <span class="size" ng-show="userModel.planType == '5GB'">5</span>
+            <span class="size" ng-show="userModel.planType == '30GB'">30</span>
+            <span class="size" ng-show="userModel.planType == '120GB'">120</span>
+            GB
+            <a href="javascript:;" class="trims-link trims-web-link">修改</a>
+          </div>
+        </div>
+        
+        <div class="pay-line"></div>
+        
+        <div class="pay-time">
+          <div class="pay-label">时长</div>
+          <div class="pay-content">
+            <ul>
+              <li ng-class="{'active': userModel.timeType == '1month'}" ng-click="changeTimeType('1month')" ng-mouseenter="tempTimeType('1month')" ng-mouseleave="recoverTimeType()">
+                <span class="time">
+                  <label class="size">1</label>个月
+                </span>
+                <span class="price">免费</span>
+              </li>
+              <li ng-class="{'active': userModel.timeType == '6month'}" ng-click="changeTimeType('6month')" ng-mouseenter="tempTimeType('6month')" ng-mouseleave="recoverTimeType()">
+                <span class="time">
+                  <label class="size">6</label>个月
+                  <i class="discount">8&nbsp;折</i>
+                </span>
+                <span class="price">
+                  <i class="save">¥59.4</i>
+                  <label class="unit">¥</label>47.5
+                </span>
+              </li>
+              <li ng-class="{'active': userModel.timeType == '12month'}" ng-click="changeTimeType('12month')" ng-mouseenter="tempTimeType('12month')" ng-mouseleave="recoverTimeType()">
+                <span class="time">
+                  <label class="size">12</label>个月
+                  <i class="discount">7.5&nbsp;折</i>
+                </span>
+                <span class="price">
+                  <i class="save">¥118.8</i>
+                  <label class="unit">¥</label>89.1
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="pay-line"></div>
+
+        <div class="pay-code">
+          <div class="pay-label">优惠</div>
+          <div class="pay-content">
+            <div class="pay-title">首个月免费</div>
+            <div class="pay-info">- ¥9.9</div>
+            <div class="clearfix" style="height: 45px;"></div>
+            <!--TODO: discount code and invite code-->
+            <div trims-input-box class="trims-input-box trims-web-input-box" type="text" value="userModel.discountCode" required="false" disabled="false" placeholder="优惠码和邀请码"></div>
+          </div>
+        </div>
+
+        <div class="pay-line"></div>
+
+        <div class="pay-bill">
+          <div class="pay-label">凭据</div>
+          <div class="pay-content">
+            <div class="pay-title">电子收据<i class="trims-icon-help"></i></div>
+            <div class="pay-info">免费</div>
+            <div class="clearfix" style="height: 40px;"></div>
+            <a href="javascript:;" class="trims-link trims-web-link">发送纸质发票</a>
+          </div>
+        </div>
+
+        <div class="pay-line"></div>
+
+        <div class="pay-price">
+          <div class="pay-label">付款</div>
+          <div class="pay-content">
+            <div class="price"><span class="num">{{userModel.payPrice}}</span>元</div>
+            <div class="method">
+              <input type="radio" class="trims-radiobox" value="alipay" ng-model="userModel.payType"><span style="width: 100px;"><i class="icon-alipay"></i>&nbsp;&nbsp;支付宝</span>
+              <input type="radio" class="trims-radiobox" value="wechat" ng-model="userModel.payType"><span><i class="icon-wechat"></i>&nbsp;&nbsp;微信支付</span>
+            </div>
+            <div class="clearfix"></div>
+            <a href="javascript:;" class="trims-link trims-web-link">其他方式</a>
+          </div>
+        </div>
+
+        <div class="pay-button-wrapper">
+          <button class="trims-btn trims-web-btn trims-web-btn-default">付款<i class="icon-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+    <ul class="register-step-wrapper">
+      <li ng-class="{'active': currStep == 1}">1</li>
+      <li ng-class="{'active': currStep == 2}">2</li>
+      <li ng-class="{'active': currStep == 3}">3</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Footer -->
+<trims-footer></trims-footer>

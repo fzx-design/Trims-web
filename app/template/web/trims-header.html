@@ -1,0 +1,25 @@
+<div class="navbar-wrapper">
+  <nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#/"></a>
+    </div>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#/download" class="trims-link trims-web-link" ng-if="activeLink != 'download'">下载 Trims</a></li>
+      <li ng-if="currUser == null"><a href="javascript:;" class="trims-link trims-web-link" ng-click="openLoginDialog()">登录</a></li>
+      <li class="dropdown" ng-if="currUser != null">
+      	<a href="javascript:;" class="dropdown-toggle trims-link trims-web-link" data-toggle="dropdown">{{currUser.email}}&nbsp;&nbsp;<i class="blue-arrow-down"></i></a>
+      	<ul class="dropdown-menu">
+          <li class="button">
+            <button class="trims-btn trims-web-btn trims-web-btn-primary">完善个人资料<i class="icon-arrow-right"></i></button>
+          </li>
+          <li class="divider"></li>
+          <li class="item project"><a href="#">我的项目<span class="badge">3</a></li>
+          <li class="item user"><a href="#/center">个人中心</a></li>
+          <li class="divider"></li>
+          <li class="item logout" ng-click="logout()"><a href="#">退出</a></li>
+      	</ul>
+      </li>
+    </ul>
+  </nav>
+</div>

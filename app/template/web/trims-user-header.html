@@ -1,0 +1,60 @@
+<div class="navbar-wrapper user">
+  <nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#/"></a>
+    </div>
+
+    <ul class="nav navbar-nav navbar-center">
+      <li class="dropdown">
+        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">个人中心&nbsp;&nbsp;<i class="grey-arrow-down" style="margin-top: -2px;"></i></a>
+        <ul class="dropdown-menu">
+          <li class="button">
+            <button class="trims-btn trims-web-btn trims-web-btn-primary">续费和升级<i class="icon-arrow-right"></i></button>
+          </li>
+          <li class="divider"></li>
+          <li class="item no-icon"><a href="#">修改个人资料</a></li>
+          <li class="item no-icon"><a href="#">修改密码</a></li>
+          <li class="item no-icon"><a href="#">备份和删除项目</a></li>
+          <li class="divider"></li>
+          <li class="item project"><a href="#">我的项目<span class="badge">3</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right" style="margin-right: 27px;">
+      <li class="item">
+        <a href="javascript:;"><i class="search"></i></a>
+      </li>
+      <li class="item">
+        <a href="javascript:;"><i class="notify"></i></a>
+      </li>
+      <li class="dropdown" ng-if="currUser != null">
+        <a href="javascript:;" class="dropdown-toggle trims-link trims-web-link avatar" data-toggle="dropdown"><img class="avatar-small" ng-src="images/avatars/1.png"/><span>{{currUser.name}}</span>&nbsp;&nbsp;<i class="blue-arrow-down"></i></a>
+        <ul class="dropdown-menu">
+          <li class="item project"><a href="#">我的项目<span class="badge">3</a></li>
+          <li class="item user"><a href="#/center">个人中心</a></li>
+          <li class="divider"></li>
+          <li class="item logout" ng-click="logout()"><a href="#">退出</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- <ul class="nav navbar-nav navbar-right">
+      <li><a href="#/download" class="trims-link trims-web-link" ng-if="activeLink != 'download'">下载 Trims</a></li>
+      <li ng-if="currUser == null"><a href="javascript:;" class="trims-link trims-web-link" ng-click="openLoginDialog()">登录</a></li>
+      <li class="dropdown" ng-if="currUser != null">
+      	<a href="javascript:;" class="dropdown-toggle trims-link trims-web-link" data-toggle="dropdown">{{currUser.email}}</a>
+      	<ul class="dropdown-menu">
+          <li class="button">
+            <button class="trims-btn trims-web-btn trims-web-btn-primary">完善个人资料<i class="icon-arrow-right"></i></button>
+          </li>
+          <li class="divider"></li>
+          <li class="item project"><a href="#">我的项目<span class="badge">3</a></li>
+          <li class="item user"><a href="#/center">个人中心</a></li>
+          <li class="divider"></li>
+          <li class="item logout" ng-click="logout()"><a href="#">退出</a></li>
+      	</ul>
+      </li>
+    </ul> -->
+  </nav>
+</div>

@@ -1,0 +1,15 @@
+<div class="trims-preview">
+	<div class="preview">
+		<img ng-src="{{value.snapshotUrl}}">
+	</div>
+	<div class="fileName">
+		<div style="height: 100%;">
+			<span ng-if="mode=='dynamic'" trims-circle-mark type="value.operation" isself="value.isSelf"></span>
+			<span class="name">{{value.name}}</span>
+		</div>
+	</div>
+	<div class="authorName">
+		<span ng-show="value.isSelf">我</span>
+		<span ng-class="mode=='dynamic'?'other':''" ng-show="!value.isSelf">来自 {{value.author}}</span>
+	</div>
+</div>

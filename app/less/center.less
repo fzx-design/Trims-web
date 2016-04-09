@@ -1,0 +1,91 @@
+.center-container {
+  width: 100%;
+  background-color: @grey-bg;
+  padding: 95px 0;
+  .center-panel {
+  	width: 600px;
+  	margin: 0 auto;
+  	.center-item {
+      padding: 25px;
+      .title {
+        float: left;
+        color: #7d7d7d;
+      }
+      .content {
+        margin-left: 60px;
+      }
+  		&.info {
+  			height: 120px;
+  			padding: 30px 25px;
+  			.avatar-big {
+  				float: left;
+          margin-right: 23px;
+  			}
+        .info-wrapper {
+          float: left;
+          margin-top: 10px;
+          .name {
+            font-size: 16px;
+            color: #000;
+          }
+          .email {
+            font-size: 14px;
+            color: #7d7d7d;
+          }
+        }
+        .link-wrapper {
+          float: right;
+          margin-top: 20px;
+        }
+  		}
+  		&.invite {
+  			height: 80px;
+        padding: 20px 25px;
+        background-color: #f0faff;
+  		}
+  		&.plan {
+  			height: 175px;
+        .content {
+          .time {
+            color: #7d7d7d;
+          }
+          .size-bar {
+            .trims-progress-container {
+              border-radius: 4px;
+              box-shadow: 0 1px 2px rgba(0,0,0,.1);
+              padding: 0;
+              overflow: hidden;
+              .trims-progress {
+                height: 18px;
+                border-radius: 0;
+                background-image: linear-gradient(to top, #59c6ff, #85d5ff);
+              }
+            }
+          }
+        }
+  		}
+  		&.password {
+  			height: 140px;
+  		}
+  		&.security {
+  			height: 150px;
+        .security {
+          padding-left: 35px;
+          .bg-image("../images/web/icon/trims-icon-security.png");
+          .bg-size(20px, 23px);
+          .bg-repeat();
+          .bg-position(0, 5px);
+        }
+  		}
+  	}
+  	.divider {
+      background-color: @grey-bg;
+      height: 1px;
+      width: 100%;
+    }
+    .trims-web-btn-primary {
+      text-align: center;
+      min-width: auto;
+    }
+  }
+}

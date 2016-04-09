@@ -1,0 +1,306 @@
+.navbar-wrapper {
+  width: 100%;
+
+  .navbar-default {
+    width: 1024px;
+    margin: 0 auto;
+    position: relative;
+
+    .navbar-nav {
+      > li {
+        > a {
+          color: #27b3fc;
+          padding: 25px 0;
+          margin-left: 30px;
+          &:hover {
+            color: #27b3fc;
+          }
+          &:active {
+            color: #1c7daf;
+          }
+        }
+        .dropdown-menu {
+          border-radius: 12px;
+        }
+      }
+      .open {
+        > a {
+          background-color: transparent;
+          &:focus {
+            color: #27b3fc;
+          }
+        }
+        .dropdown-menu {
+          > li {
+            > a {
+              background: none;
+            }
+          }
+        }
+      }
+      &.navbar-center {
+        .open {
+          > a {
+            &:focus {
+              color: #000;
+            }
+          }
+        }
+        .dropdown-menu {
+          left: -65px;
+        }
+      }
+    }
+  }
+
+  .navbar {
+    min-height: 70px;
+    margin-bottom: 0;
+    border-radius: 0;
+    border: none;
+  }
+
+  .navbar-brand {
+    float: left;
+    width: 120px;
+    height: 35px;
+    padding: 0;
+    margin-top: 17px;
+    .bg-image("../images/welcom/logo.png");
+    .bg-size(120px, 35px);
+    .bg-repeat();
+    .bg-position();
+  }
+
+  .navbar-center {
+    position: absolute;
+    width: 120px;
+    left: 50%;
+    margin-left: -60px;
+    &.navbar-nav {
+      > li {
+        > a {
+          color: #000;
+          margin: 0;
+          font-size: 18px;
+          &:hover {
+            color: #000;
+          }
+          &:active {
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-right {
+    margin-right: 0;
+  }
+  &.user {
+    .navbar-default {
+      width: 100%;
+      .navbar-nav {
+        > li {
+          > a {
+            padding: 19px 0;
+            &.avatar {
+              line-height: 22px;
+              .avatar-small {
+                float: left;
+                margin-right: 10px;
+              }
+            }
+          }
+          &.item {
+            > a {
+              margin: 15px 0 15px 30px;
+              padding: 0;
+              &:hover {
+                background-color: #dbdbdb;
+                border-radius: 4px;
+              }
+              i {
+                display: block;
+                width: 30px;
+                height: 30px;
+                .bg-position();
+                .bg-repeat();
+                &.notify {
+                  .bg-image("../images/web/icon/trims-icon-alert.png");
+                  .bg-size(16px, 17px);
+                }
+                &.search {
+                  .bg-image("../images/web/icon/trims-icon-search.png");
+                  .bg-size(17px, 16px);
+                }
+              }
+            }
+          }
+        }
+      }
+      .navbar-center {
+        &.navbar-nav {
+          > li {
+            > a {
+              padding: 20px 0;
+            }
+          }
+        }
+      }
+    }
+
+    .navbar {
+      min-height: 60px;
+      margin-bottom: 0;
+      border-radius: 0;
+      border: none;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+    }
+
+    .navbar-brand {
+      float: left;
+      width: 60px;
+      height: 18px;
+      padding: 0;
+      margin-top: 18px;
+      margin-left: 25px;
+      .bg-image("../images/welcom/logo.png");
+      .bg-size(60px, 18px);
+      .bg-repeat();
+      .bg-position();
+    }
+  }
+}
+
+.dropdown-menu {
+  min-width: 210px;
+  background-color: #fff;
+  box-shadow: 0px 12px 24px 0px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 0;
+  border-radius: 12px;
+  top: 60px;
+  overflow: hidden;
+  > li {
+    > a {
+      font-size: 16px;
+      color: #000;
+      line-height: 20px;
+      padding: 15px;
+      &:hover, &:active, &:focus {
+        color: #000;
+      }
+      .badge {
+        float: right;
+      }
+    }
+    &.item {
+      padding-left: 40px;
+      &:hover {
+        background-color: @grey-bg;
+      }
+      &.no-icon {
+        padding-left: 0;
+      }
+      &.project {
+        .bg-image("../images/web/icon/trims-icon-security.png");
+        .bg-size(20px, 23px);
+        .bg-repeat();
+        .bg-position(15px, center);
+      }
+      &.user {
+        .bg-image("../images/web/icon/trims-icon-profile.png");
+        .bg-size(24px, 24px);
+        .bg-repeat();
+        .bg-position(15px, center);
+      }
+      &.logout {
+        > a {
+          color: #ff6c6c;
+          &:hover, &:active, &:focus {
+            color: #ff6c6c;
+          }
+        }
+      }
+    }
+    &.divider {
+      background-color: @grey-bg;
+      margin: 0;
+    }
+    &.button {
+      padding: 15px;
+      .trims-web-btn {
+        min-width: 180px;
+      }
+    }
+  }
+}
+
+.white-header {
+  .navbar-wrapper {
+    background-color: #fff;
+    .navbar-default {
+      background-color: #fff;
+    }
+  }
+}
+
+.grey-header {
+  .navbar-wrapper {
+    background-color: #f1f1f1;
+    .navbar-default {
+      background-color: #f1f1f1;
+    }
+  }
+}
+
+.ngdialog.trims-dialog.trims-login-dialog {
+  .ngdialog-overlay {
+  }
+  .ngdialog-content {
+    width: 440px;
+    height: 335px;
+    padding: 15px 30px 20px;
+    .login-dialog-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: #000;
+      line-height: 24px;
+      position: relative;
+      text-align: center;
+      .trims-icon-lock {
+        background-color: #ebebeb;
+        border-radius: 12px;
+        vertical-align: middle;
+        margin-top: -3px;
+      }
+    }
+    .trims-input-box.trims-web-input-box {
+      width: 100%;
+    }
+    .login-email {
+      margin-top: 30px;
+    }
+    .login-password {
+      margin-top: 18px;
+    }
+    .checkbox-container {
+      margin-top: 18px;
+      font-size: 14px;
+      color: #7d7d7d;
+      line-height: 20px;
+      input[type="checkbox"] {
+        line-height: 20px;
+        vertical-align: middle;
+      }
+      &::after {
+        clear: both;
+      }
+    }
+    .button-container {
+      margin-top: 78px;
+      text-align: center;
+    }
+  }
+}
